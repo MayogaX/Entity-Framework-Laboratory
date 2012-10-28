@@ -1,0 +1,2 @@
+C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\bin\Debug\MsSqlCe.Console.exe.config
+C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\obj\Debug\MsSqlCe.Console.csprojResolveAssemblyReference.cache
