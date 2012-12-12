@@ -41,6 +41,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,12 +52,43 @@
   <ItemGroup>
     <Compile Include="Manga.cs" />
     <Compile Include="MContext.cs" />
+    <Compile Include="Migrations\201212070336147_InitialCreate.cs" />
+    <Compile Include="Migrations\201212070336147_InitialCreate.Designer.cs">
+      <DependentUpon>201212070336147_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212070649103_add-migration SqlInternalOps.cs" />
+    <Compile Include="Migrations\201212070649103_add-migration SqlInternalOps.Designer.cs">
+      <DependentUpon>201212070649103_add-migration SqlInternalOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212070652489_Teste.cs" />
+    <Compile Include="Migrations\201212070652489_Teste.Designer.cs">
+      <DependentUpon>201212070652489_Teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212070653332_Test2.cs" />
+    <Compile Include="Migrations\201212070653332_Test2.Designer.cs">
+      <DependentUpon>201212070653332_Test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201212070336147_InitialCreate.resx">
+      <DependentUpon>201212070336147_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212070649103_add-migration SqlInternalOps.resx">
+      <DependentUpon>201212070649103_add-migration SqlInternalOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212070652489_Teste.resx">
+      <DependentUpon>201212070652489_Teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212070653332_Test2.resx">
+      <DependentUpon>201212070653332_Test2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

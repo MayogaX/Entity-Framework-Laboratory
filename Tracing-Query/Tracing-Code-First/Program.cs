@@ -12,17 +12,17 @@ namespace Tracing_Code_First
     {
         static void Main(string[] args)
         {
-            using (MContext db = new MContext())
-            {
-                Manga manga = new Manga();
-                manga.Title = "Saint Seiya";
-                manga.Description = "The battle of Athena and Hades";
+            //using (MContext db = new MContext())
+            //{
+            //    Manga manga = new Manga();
+            //    manga.Title = "Saint Seiya";
+            //    manga.Description = "The battle of Athena and Hades";
 
-                db.Mangas.Add(manga);
-                db.SaveChanges();
-            }
+            //    db.Mangas.Add(manga).ToString();
+            //    db.SaveChanges();
+            //}
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
             using (MContext db = new MContext())
             {
@@ -30,8 +30,8 @@ namespace Tracing_Code_First
                               where m.Id.Equals(1)
                               select m);
                 Console.WriteLine(((System.Data.Entity.Infrastructure.DbQuery<Manga>)result).ToString());
+                //Console.WriteLine(result.Title);
             }
-
             Console.ReadLine();
         }
     }
