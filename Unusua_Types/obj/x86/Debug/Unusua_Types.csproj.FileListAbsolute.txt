@@ -1,0 +1,8 @@
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\bin\Debug\Unusua_Types.exe.config
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\bin\Debug\Unusua_Types.exe
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\bin\Debug\Unusua_Types.pdb
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\bin\Debug\EntityFramework.dll
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\bin\Debug\EntityFramework.xml
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\obj\x86\Debug\Unusua_Types.csprojResolveAssemblyReference.cache
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\obj\x86\Debug\Unusua_Types.exe
+C:\Users\priscila\Documents\GitHub\Entity-Framework-Laboratory\Unusua_Types\obj\x86\Debug\Unusua_Types.pdb
