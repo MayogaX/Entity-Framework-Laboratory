@@ -332,7 +332,7 @@
     <edmx:ConceptualModels>
       <Schema Namespace="AdventureWorks2008Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="AdventureWorks2008Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Addresses" EntityType="AdventureWorks2008Model.Address" />
+          <EntitySet Name="Endereços" EntityType="AdventureWorks2008Model.Endereço" />
           <EntitySet Name="AddressTypes" EntityType="AdventureWorks2008Model.AddressType" />
           <EntitySet Name="BusinessEntities" EntityType="AdventureWorks2008Model.BusinessEntity" />
           <EntitySet Name="BusinessEntityAddresses" EntityType="AdventureWorks2008Model.BusinessEntityAddress" />
@@ -345,7 +345,7 @@
           <EntitySet Name="PersonPhones" EntityType="AdventureWorks2008Model.PersonPhone" />
           <EntitySet Name="PhoneNumberTypes" EntityType="AdventureWorks2008Model.PhoneNumberType" />
           <AssociationSet Name="FK_BusinessEntityAddress_Address_AddressID" Association="AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID">
-            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Address" EntitySet="Endereços" />
             <End Role="BusinessEntityAddress" EntitySet="BusinessEntityAddresses" />
           </AssociationSet>
           <AssociationSet Name="FK_BusinessEntityAddress_AddressType_AddressTypeID" Association="AdventureWorks2008Model.FK_BusinessEntityAddress_AddressType_AddressTypeID">
@@ -389,7 +389,7 @@
             <End Role="PersonPhone" EntitySet="PersonPhones" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Address">
+        <EntityType Name="Endereço">
           <Key>
             <PropertyRef Name="AddressID" />
           </Key>
@@ -540,7 +540,7 @@
           <NavigationProperty Name="PersonPhones" Relationship="AdventureWorks2008Model.FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID" FromRole="PhoneNumberType" ToRole="PersonPhone" />
         </EntityType>
         <Association Name="FK_BusinessEntityAddress_Address_AddressID">
-          <End Role="Address" Type="AdventureWorks2008Model.Address" Multiplicity="1" />
+          <End Role="Address" Type="AdventureWorks2008Model.Endereço" Multiplicity="1" />
           <End Role="BusinessEntityAddress" Type="AdventureWorks2008Model.BusinessEntityAddress" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Address">
@@ -677,8 +677,8 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="AdventureWorks2008ModelStoreContainer" CdmEntityContainer="AdventureWorks2008Entities">
-          <EntitySetMapping Name="Addresses">
-            <EntityTypeMapping TypeName="AdventureWorks2008Model.Address">
+          <EntitySetMapping Name="Endereços">
+            <EntityTypeMapping TypeName="AdventureWorks2008Model.Endereço">
               <MappingFragment StoreEntitySet="Address">
                 <ScalarProperty Name="AddressID" ColumnName="AddressID" />
                 <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
@@ -831,12 +831,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="Model">
-        <EntityTypeShape EntityType="AdventureWorks2008Model.Address" Width="1.5" PointX="0.75" PointY="4.125" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2008Model.Endereço" Width="1.5" PointX="2" PointY="2.75" Height="2.7494921874999996" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.AddressType" Width="1.5" PointX="0.75" PointY="11.625" Height="1.9802864583333353" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.BusinessEntity" Width="1.5" PointX="0.75" PointY="7.75" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.BusinessEntityAddress" Width="1.5" PointX="3" PointY="7.625" Height="2.5571907552083344" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.BusinessEntityContact" Width="1.5" PointX="5.25" PointY="9.5" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2008Model.ContactType" Width="1.5" PointX="3" PointY="4.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2008Model.ContactType" Width="1.5" PointX="7.375" PointY="6.625" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.CountryRegion" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.EmailAddress" Width="1.5" PointX="5.25" PointY="13" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.Password" Width="1.5" PointX="5.25" PointY="15.875" Height="2.1725878906249978" IsExpanded="true" />
@@ -844,10 +844,8 @@
         <EntityTypeShape EntityType="AdventureWorks2008Model.PersonPhone" Width="1.5" PointX="8.25" PointY="14.375" Height="2.1725878906250031" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2008Model.PhoneNumberType" Width="1.5" PointX="6" PointY="19.625" Height="1.7879850260416745" IsExpanded="true" />
         <AssociationConnector Association="AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="6.8744921875" />
-          <ConnectorPoint PointX="2.625" PointY="7.2494921875" />
-          <ConnectorPoint PointX="2.625" PointY="8.9035953776041676" />
-          <ConnectorPoint PointX="3" PointY="8.9035953776041676" />
+          <ConnectorPoint PointX="3.25" PointY="5.4994921875" />
+          <ConnectorPoint PointX="3.25" PointY="7.625" />
         </AssociationConnector>
         <AssociationConnector Association="AdventureWorks2008Model.FK_BusinessEntityAddress_AddressType_AddressTypeID" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="11.688460538461539" />
@@ -857,8 +855,6 @@
         </AssociationConnector>
         <AssociationConnector Association="AdventureWorks2008Model.FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="8.2642976888020847" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="8.2642976888020847" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="8.2642976888020847" />
           <ConnectorPoint PointX="3" PointY="8.2642976888020847" />
         </AssociationConnector>
         <AssociationConnector Association="AdventureWorks2008Model.FK_BusinessEntityContact_BusinessEntity_BusinessEntityID" ManuallyRouted="false">
@@ -884,9 +880,9 @@
           <ConnectorPoint PointX="3" PointY="15.490102539062498" />
         </AssociationConnector>
         <AssociationConnector Association="AdventureWorks2008Model.FK_BusinessEntityContact_ContactType_ContactTypeID" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.7689925130208337" />
-          <ConnectorPoint PointX="6" PointY="5.7689925130208337" />
-          <ConnectorPoint PointX="6" PointY="9.5" />
+          <ConnectorPoint PointX="8.125" PointY="8.4129850260416674" />
+          <ConnectorPoint PointX="8.125" PointY="10.778595377604166" />
+          <ConnectorPoint PointX="6.75" PointY="10.778595377604166" />
         </AssociationConnector>
         <AssociationConnector Association="AdventureWorks2008Model.FK_BusinessEntityContact_Person_PersonID" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="13.251152846153847" />

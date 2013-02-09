@@ -19,7 +19,7 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_Address_AddressID", "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Adventures_First.Address), "BusinessEntityAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Adventures_First.BusinessEntityAddress), true)]
+[assembly: EdmRelationshipAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_Address_AddressID", "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Adventures_First.Endereço), "BusinessEntityAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Adventures_First.BusinessEntityAddress), true)]
 [assembly: EdmRelationshipAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_AddressType_AddressTypeID", "AddressType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Adventures_First.AddressType), "BusinessEntityAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Adventures_First.BusinessEntityAddress), true)]
 [assembly: EdmRelationshipAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID", "BusinessEntity", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Adventures_First.BusinessEntity), "BusinessEntityAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Adventures_First.BusinessEntityAddress), true)]
 [assembly: EdmRelationshipAttribute("AdventureWorks2008Model", "FK_BusinessEntityContact_BusinessEntity_BusinessEntityID", "BusinessEntity", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Adventures_First.BusinessEntity), "BusinessEntityContact", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Adventures_First.BusinessEntityContact), true)]
@@ -84,18 +84,18 @@ namespace Adventures_First
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Address> Addresses
+        public ObjectSet<Endereço> Endereços
         {
             get
             {
-                if ((_Addresses == null))
+                if ((_Endereços == null))
                 {
-                    _Addresses = base.CreateObjectSet<Address>("Addresses");
+                    _Endereços = base.CreateObjectSet<Endereço>("Endereços");
                 }
-                return _Addresses;
+                return _Endereços;
             }
         }
-        private ObjectSet<Address> _Addresses;
+        private ObjectSet<Endereço> _Endereços;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -278,11 +278,11 @@ namespace Adventures_First
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Addresses EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Endereços EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToAddresses(Address address)
+        public void AddToEndereços(Endereço endereço)
         {
-            base.AddObject("Addresses", address);
+            base.AddObject("Endereços", endereço);
         }
     
         /// <summary>
@@ -380,269 +380,6 @@ namespace Adventures_First
     #endregion
 
     #region Entities
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AdventureWorks2008Model", Name="Address")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Address : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new Address object.
-        /// </summary>
-        /// <param name="addressID">Initial value of the AddressID property.</param>
-        /// <param name="addressLine1">Initial value of the AddressLine1 property.</param>
-        /// <param name="city">Initial value of the City property.</param>
-        /// <param name="stateProvinceID">Initial value of the StateProvinceID property.</param>
-        /// <param name="postalCode">Initial value of the PostalCode property.</param>
-        /// <param name="rowguid">Initial value of the rowguid property.</param>
-        /// <param name="modifiedDate">Initial value of the ModifiedDate property.</param>
-        public static Address CreateAddress(global::System.Int32 addressID, global::System.String addressLine1, global::System.String city, global::System.Int32 stateProvinceID, global::System.String postalCode, global::System.Guid rowguid, global::System.DateTime modifiedDate)
-        {
-            Address address = new Address();
-            address.AddressID = addressID;
-            address.AddressLine1 = addressLine1;
-            address.City = city;
-            address.StateProvinceID = stateProvinceID;
-            address.PostalCode = postalCode;
-            address.rowguid = rowguid;
-            address.ModifiedDate = modifiedDate;
-            return address;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AddressID
-        {
-            get
-            {
-                return _AddressID;
-            }
-            set
-            {
-                if (_AddressID != value)
-                {
-                    OnAddressIDChanging(value);
-                    ReportPropertyChanging("AddressID");
-                    _AddressID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AddressID");
-                    OnAddressIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AddressID;
-        partial void OnAddressIDChanging(global::System.Int32 value);
-        partial void OnAddressIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String AddressLine1
-        {
-            get
-            {
-                return _AddressLine1;
-            }
-            set
-            {
-                OnAddressLine1Changing(value);
-                ReportPropertyChanging("AddressLine1");
-                _AddressLine1 = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("AddressLine1");
-                OnAddressLine1Changed();
-            }
-        }
-        private global::System.String _AddressLine1;
-        partial void OnAddressLine1Changing(global::System.String value);
-        partial void OnAddressLine1Changed();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String AddressLine2
-        {
-            get
-            {
-                return _AddressLine2;
-            }
-            set
-            {
-                OnAddressLine2Changing(value);
-                ReportPropertyChanging("AddressLine2");
-                _AddressLine2 = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("AddressLine2");
-                OnAddressLine2Changed();
-            }
-        }
-        private global::System.String _AddressLine2;
-        partial void OnAddressLine2Changing(global::System.String value);
-        partial void OnAddressLine2Changed();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String City
-        {
-            get
-            {
-                return _City;
-            }
-            set
-            {
-                OnCityChanging(value);
-                ReportPropertyChanging("City");
-                _City = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("City");
-                OnCityChanged();
-            }
-        }
-        private global::System.String _City;
-        partial void OnCityChanging(global::System.String value);
-        partial void OnCityChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 StateProvinceID
-        {
-            get
-            {
-                return _StateProvinceID;
-            }
-            set
-            {
-                OnStateProvinceIDChanging(value);
-                ReportPropertyChanging("StateProvinceID");
-                _StateProvinceID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("StateProvinceID");
-                OnStateProvinceIDChanged();
-            }
-        }
-        private global::System.Int32 _StateProvinceID;
-        partial void OnStateProvinceIDChanging(global::System.Int32 value);
-        partial void OnStateProvinceIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String PostalCode
-        {
-            get
-            {
-                return _PostalCode;
-            }
-            set
-            {
-                OnPostalCodeChanging(value);
-                ReportPropertyChanging("PostalCode");
-                _PostalCode = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("PostalCode");
-                OnPostalCodeChanged();
-            }
-        }
-        private global::System.String _PostalCode;
-        partial void OnPostalCodeChanging(global::System.String value);
-        partial void OnPostalCodeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid rowguid
-        {
-            get
-            {
-                return _rowguid;
-            }
-            set
-            {
-                OnrowguidChanging(value);
-                ReportPropertyChanging("rowguid");
-                _rowguid = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("rowguid");
-                OnrowguidChanged();
-            }
-        }
-        private global::System.Guid _rowguid;
-        partial void OnrowguidChanging(global::System.Guid value);
-        partial void OnrowguidChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ModifiedDate
-        {
-            get
-            {
-                return _ModifiedDate;
-            }
-            set
-            {
-                OnModifiedDateChanging(value);
-                ReportPropertyChanging("ModifiedDate");
-                _ModifiedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ModifiedDate");
-                OnModifiedDateChanged();
-            }
-        }
-        private global::System.DateTime _ModifiedDate;
-        partial void OnModifiedDateChanging(global::System.DateTime value);
-        partial void OnModifiedDateChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_Address_AddressID", "BusinessEntityAddress")]
-        public EntityCollection<BusinessEntityAddress> BusinessEntityAddresses
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BusinessEntityAddress>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "BusinessEntityAddress");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BusinessEntityAddress>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "BusinessEntityAddress", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
     
     /// <summary>
     /// No Metadata Documentation available.
@@ -1174,15 +911,15 @@ namespace Adventures_First
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_Address_AddressID", "Address")]
-        public Address Address
+        public Endereço Address
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address").Value = value;
             }
         }
         /// <summary>
@@ -1190,17 +927,17 @@ namespace Adventures_First
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Address> AddressReference
+        public EntityReference<Endereço> AddressReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Address>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereço>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "Address", value);
                 }
             }
         }
@@ -2010,6 +1747,269 @@ namespace Adventures_First
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("AdventureWorks2008Model.FK_EmailAddress_Person_BusinessEntityID", "Person", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="AdventureWorks2008Model", Name="Endereço")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Endereço : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Endereço object.
+        /// </summary>
+        /// <param name="addressID">Initial value of the AddressID property.</param>
+        /// <param name="addressLine1">Initial value of the AddressLine1 property.</param>
+        /// <param name="city">Initial value of the City property.</param>
+        /// <param name="stateProvinceID">Initial value of the StateProvinceID property.</param>
+        /// <param name="postalCode">Initial value of the PostalCode property.</param>
+        /// <param name="rowguid">Initial value of the rowguid property.</param>
+        /// <param name="modifiedDate">Initial value of the ModifiedDate property.</param>
+        public static Endereço CreateEndereço(global::System.Int32 addressID, global::System.String addressLine1, global::System.String city, global::System.Int32 stateProvinceID, global::System.String postalCode, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            Endereço endereço = new Endereço();
+            endereço.AddressID = addressID;
+            endereço.AddressLine1 = addressLine1;
+            endereço.City = city;
+            endereço.StateProvinceID = stateProvinceID;
+            endereço.PostalCode = postalCode;
+            endereço.rowguid = rowguid;
+            endereço.ModifiedDate = modifiedDate;
+            return endereço;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 AddressID
+        {
+            get
+            {
+                return _AddressID;
+            }
+            set
+            {
+                if (_AddressID != value)
+                {
+                    OnAddressIDChanging(value);
+                    ReportPropertyChanging("AddressID");
+                    _AddressID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AddressID");
+                    OnAddressIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _AddressID;
+        partial void OnAddressIDChanging(global::System.Int32 value);
+        partial void OnAddressIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AddressLine1
+        {
+            get
+            {
+                return _AddressLine1;
+            }
+            set
+            {
+                OnAddressLine1Changing(value);
+                ReportPropertyChanging("AddressLine1");
+                _AddressLine1 = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("AddressLine1");
+                OnAddressLine1Changed();
+            }
+        }
+        private global::System.String _AddressLine1;
+        partial void OnAddressLine1Changing(global::System.String value);
+        partial void OnAddressLine1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String AddressLine2
+        {
+            get
+            {
+                return _AddressLine2;
+            }
+            set
+            {
+                OnAddressLine2Changing(value);
+                ReportPropertyChanging("AddressLine2");
+                _AddressLine2 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("AddressLine2");
+                OnAddressLine2Changed();
+            }
+        }
+        private global::System.String _AddressLine2;
+        partial void OnAddressLine2Changing(global::System.String value);
+        partial void OnAddressLine2Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String City
+        {
+            get
+            {
+                return _City;
+            }
+            set
+            {
+                OnCityChanging(value);
+                ReportPropertyChanging("City");
+                _City = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("City");
+                OnCityChanged();
+            }
+        }
+        private global::System.String _City;
+        partial void OnCityChanging(global::System.String value);
+        partial void OnCityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 StateProvinceID
+        {
+            get
+            {
+                return _StateProvinceID;
+            }
+            set
+            {
+                OnStateProvinceIDChanging(value);
+                ReportPropertyChanging("StateProvinceID");
+                _StateProvinceID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StateProvinceID");
+                OnStateProvinceIDChanged();
+            }
+        }
+        private global::System.Int32 _StateProvinceID;
+        partial void OnStateProvinceIDChanging(global::System.Int32 value);
+        partial void OnStateProvinceIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String PostalCode
+        {
+            get
+            {
+                return _PostalCode;
+            }
+            set
+            {
+                OnPostalCodeChanging(value);
+                ReportPropertyChanging("PostalCode");
+                _PostalCode = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("PostalCode");
+                OnPostalCodeChanged();
+            }
+        }
+        private global::System.String _PostalCode;
+        partial void OnPostalCodeChanging(global::System.String value);
+        partial void OnPostalCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return _rowguid;
+            }
+            set
+            {
+                OnrowguidChanging(value);
+                ReportPropertyChanging("rowguid");
+                _rowguid = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("rowguid");
+                OnrowguidChanged();
+            }
+        }
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return _ModifiedDate;
+            }
+            set
+            {
+                OnModifiedDateChanging(value);
+                ReportPropertyChanging("ModifiedDate");
+                _ModifiedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedDate");
+                OnModifiedDateChanged();
+            }
+        }
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureWorks2008Model", "FK_BusinessEntityAddress_Address_AddressID", "BusinessEntityAddress")]
+        public EntityCollection<BusinessEntityAddress> BusinessEntityAddresses
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BusinessEntityAddress>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "BusinessEntityAddress");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BusinessEntityAddress>("AdventureWorks2008Model.FK_BusinessEntityAddress_Address_AddressID", "BusinessEntityAddress", value);
                 }
             }
         }

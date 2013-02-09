@@ -1,0 +1,2 @@
+C:\Users\MayogaX\Documents\GitHub\Entity-Framework-Laboratory\Adventures-First\Adventures-First\obj\x86\Debug\Adventures-Database-First.csprojResolveAssemblyReference.cache
+C:\Users\MayogaX\Documents\GitHub\Entity-Framework-Laboratory\Adventures-First\Adventures-First\bin\Debug\Adventures-First.exe.config
