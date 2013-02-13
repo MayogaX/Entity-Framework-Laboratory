@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCS.Busines.Test", "DCS.Test\DCS.Busines.Test.csproj", "{AFC40B84-6B63-4E83-8B1B-3924188962EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCS.Test", "DCS.Test\DCS.Test.csproj", "{AFC40B84-6B63-4E83-8B1B-3924188962EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4112290C-DDF7-43D4-BCB5-FF73688D96E0}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCS.Model", "DCS.Model\DCS.Model.csproj", "{ED974013-787D-4ED7-ADF6-71017EDC2B66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCS.Busines", "DCS.Busines\DCS.Busines.csproj", "{3FAD8A7E-4D60-4953-902E-4621E78A1241}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -29,6 +31,10 @@ Global
 		{ED974013-787D-4ED7-ADF6-71017EDC2B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED974013-787D-4ED7-ADF6-71017EDC2B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED974013-787D-4ED7-ADF6-71017EDC2B66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FAD8A7E-4D60-4953-902E-4621E78A1241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FAD8A7E-4D60-4953-902E-4621E78A1241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FAD8A7E-4D60-4953-902E-4621E78A1241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FAD8A7E-4D60-4953-902E-4621E78A1241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

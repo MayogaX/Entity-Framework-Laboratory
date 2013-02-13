@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{ED974013-787D-4ED7-ADF6-71017EDC2B66}</ProjectGuid>
+    <ProjectGuid>{3FAD8A7E-4D60-4953-902E-4621E78A1241}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DCS.Model</RootNamespace>
-    <AssemblyName>DCS.Model</AssemblyName>
+    <RootNamespace>DCS.Busines</RootNamespace>
+    <AssemblyName>DCS.Busines</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exemple.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Userbl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DCS.Model\DCS.Model.csproj">
+      <Project>{ED974013-787D-4ED7-ADF6-71017EDC2B66}</Project>
+      <Name>DCS.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
