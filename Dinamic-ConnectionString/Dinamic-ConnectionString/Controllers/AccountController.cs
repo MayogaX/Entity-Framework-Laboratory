@@ -31,6 +31,12 @@ namespace Dinamic_ConnectionString.Controllers
                 if (Membership.ValidateUser(model.UserName, model.Password))
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+
+                    MyConnectionString MyCs = new MyConnectionString();
+                    MyCs.ConnectionString = "escolha aqui uma connection string ou busque do banco";
+
+                    Session["MyConnectionString"] = MyCs;
+
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                         && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                     {
