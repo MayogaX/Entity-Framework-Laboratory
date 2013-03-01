@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                That is a simple exemple how to work with <strong>membership</strong> whit Entity Framework Code First.<br />
+                For read how to use read <a href="http://dev.mayogax.me/how-to-work-with-membership-in-the-entity-framework-code-first">about in my blog</a>.<br />
+            </p>
+        </div>
+    </section>
+}
+<h3>How the use:</h3>
+<ol class="round">
+    <li>To create a mvc project
+    </li>
+    <li>get the nuget package
+    </li>
+    <li>run the project</li>
+    <li>the users and roles seed of the DataContextInitializer will to work normally
+    </li>
+</ol>
