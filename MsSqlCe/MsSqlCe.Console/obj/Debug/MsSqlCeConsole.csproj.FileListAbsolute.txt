@@ -1,8 +1,0 @@
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\bin\Debug\MsSqlCe.Console.exe.config
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\bin\Debug\MsSqlCe.Console.exe
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\bin\Debug\MsSqlCe.Console.pdb
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\bin\Debug\EntityFramework.dll
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\bin\Debug\EntityFramework.xml
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\obj\Debug\MsSqlCe.Console.exe
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\obj\Debug\MsSqlCe.Console.pdb
-C:\Users\MayogaX\Projetos\DotNet\Github\Entity-Framework-Code-First-Laboritory\MsSqlCe\MsSqlCe.Console\obj\Debug\MsSqlCeConsole.csprojResolveAssemblyReference.cache
