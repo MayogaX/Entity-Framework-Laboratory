@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteMigration", "TesteMigration\TesteMigration.csproj", "{78F54234-DDC0-4C43-BB42-7ED44C8D5CEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "TesteMigration\Model.csproj", "{78F54234-DDC0-4C43-BB42-7ED44C8D5CEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{032BDDFA-41AA-4263-A3C7-F011491F21A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{15B8B4A7-7E5C-463E-9DC9-145810A52222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTest", "MigrationTest\MigrationTest.csproj", "{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +39,21 @@ Global
 		{032BDDFA-41AA-4263-A3C7-F011491F21A5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{032BDDFA-41AA-4263-A3C7-F011491F21A5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{032BDDFA-41AA-4263-A3C7-F011491F21A5}.Release|x86.ActiveCfg = Release|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5AB468D0-C32D-4B7A-AC0C-DED0D976A415} = {15B8B4A7-7E5C-463E-9DC9-145810A52222}
 	EndGlobalSection
 EndGlobal
